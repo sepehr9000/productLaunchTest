@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Box, Sparkles, BookOpen, Video, Check, Loader, ChevronDown, Play } from "lucide-react"
 
-export default function Home() {
+export function Waitlist() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
