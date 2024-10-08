@@ -10,16 +10,20 @@ export default function Home() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
+  const [loading, error] = useState(false);
+  // If you need the error state, use it or comment it out
+  // const [error, setError] = useState<string | null>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError("")
+    // If you need the error state, use it or comment it out
+    // setError("");
 
     if (!email) {
-      setError("Please enter your email address.")
+      // If you need the error state, use it or comment it out
+      // setError("Please enter your email address.");
       setIsSubmitting(false)
       return
     }
@@ -39,7 +43,8 @@ export default function Home() {
 
       setIsSubmitted(true)
     } catch (error) {
-      setError("An error occurred. Please try again.")
+      // If you need the error state, use it or comment it out
+      // setError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false)
     }
@@ -182,7 +187,7 @@ export default function Home() {
                 You're on the list!
               </h3>
               <p className="mt-2 text-gray-200">
-                We'll notify you when CourseCubes is ready.
+                We&apos;ll notify you when we&apos;re ready to launch.
               </p>
             </div>
           )}
